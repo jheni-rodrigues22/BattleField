@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cálculo de Dano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>⚔️ Arena de Batalha</h1>
+
+      <div class="battlefield">
+        <div class="power-menu atacante">
+          <h3>🔥 Poder</h3>
+          <select id="poderAtacante">
+            <option value="">Escolha</option>
+            <option value="70">🔥 Fogo (70)</option>
+            <option value="90">💥 Explosão (90)</option>
+            <option value="50">❄️ Gelo (50)</option>
+            <option value="120">☠️ Sombra (120)</option>
+          </select>
+        </div>
+        <div class="battle-card atacante">
+          <h2>⚔️ Atacante</h2>
+
+          <input
+            type="text"
+            id="nomeAtacante"
+            placeholder="Nome do guerreiro"
+          />
+
+          <input type="number" id="ataque" placeholder="Poder de ataque" />
+
+          <input type="number" id="vidaAtacante" placeholder="Pontos de vida" />
+
+          <span class="vida-label">❤️ Vida do atacante</span>
+          <div class="life-bar">
+            <div class="life-fill" id="vidaAtacanteBar"></div>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" id="escudoAtacante" />
+            Escudo equipado
+          </label>
+        </div>
+
+        <div class="vs">⚔️</div>
+
+        <div class="battle-card defensor">
+          <h2>🛡️ Defensor</h2>
+
+          <input type="text" id="nomeDefensor" placeholder="Nome do defensor" />
+
+          <input type="number" id="defesa" placeholder="Poder de defesa" />
+
+          <input type="number" id="vidaDefensor" placeholder="Pontos de vida" />
+
+          <span class="vida-label">❤️ Vida do defensor</span>
+          <div class="life-bar">
+            <div class="life-fill" id="vidaDefensorBar"></div>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" id="escudoDefensor" />
+            Escudo equipado
+          </label>
+        </div>
+
+        <div class="power-menu defensor">
+          <h3>🛡️ Poder</h3>
+          <select id="poderDefensor">
+            <option value="">Escolha</option>
+            <option value="40">🪨 Defesa (40)</option>
+            <option value="60">✨ Barreira (60)</option>
+            <option value="80">🌀 Reflexo (80)</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-batalha" id="btnAcao">Começar Batalha</button>
+
+      <div class="status">
+        <div class="vida-container">
+          <span>❤️ Vida</span>
+          <div class="vida-barra">
+            <div class="vida-atual" id="vidaBarra"></div>
+          </div>
+        </div>
+
+        <div class="escudo" id="escudoVisual">🛡️ Escudo Ativo</div>
+      </div>
+
+      <div class="resultado" id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <div class="explosao" id="explosao">💥</div>
+    <div class="sangue-container" id="sangueContainer"></div>
+  </body>
+</html>
